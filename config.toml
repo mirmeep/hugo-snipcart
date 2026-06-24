@@ -1,7 +1,6 @@
 baseURL = 'http://arthub.dev/'
 languageCode = 'en-us'
-title = 'Art Hub Studio DEVELOPMENT'
-
+title = 'DEV Art Hub Studio LLC'
 
 [caches]
   [caches.images]
