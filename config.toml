@@ -1,6 +1,6 @@
 baseURL = 'http://arthub.dev/'
 languageCode = 'en-us'
-title = 'CloudDeli'
+title = 'Art Hub Studio DEVELOPMENT'
 
 
 [caches]
