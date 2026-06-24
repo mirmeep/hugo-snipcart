@@ -38,7 +38,6 @@ jobs:
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb  
-        run: |
           echo "[services]" >> hugo.toml
           echo "[services.exampleService]" >> hugo.toml
           echo "secretKey = '${PUBLIC_TEST_API_KEY}'" >> hugo.toml        
