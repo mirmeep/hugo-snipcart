@@ -4,6 +4,7 @@
     <img class="product__image" src="{{ . }}" alt="">
   {{ end }}
   <p class="product__description">{{ .description }}</p>
+  <!-- TODO: add variant drop-down for sizes. Update main.scss grid-->
   <div class="product__button-container">
     <div class="product__price">${{ .price }}</div>
     <button
@@ -12,7 +13,9 @@
       data-item-name="{{ .name }}"
       data-item-price="{{ .price }}"
       data-item-url="{{ .product_url }}"
-      data-item-description="{{ .description }}">
+      data-item-description="{{ .description }}"
+      data-item-custom1-name="{{ .size_variant }}"
+      data-item-custom1-options="{{ .size_variant_options }}">
       Add to cart
     </button>
   </div>

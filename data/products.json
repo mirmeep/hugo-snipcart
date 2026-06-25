@@ -2,17 +2,19 @@
 	{
 		"id": "INSTRUMENTS",
 		"name": "Musical Instruments",
-		"price": "15.99",
+		"price": "7.99",
 		"image": "/posters/musical-instruments.webp",
-		"description": "60\" x 36\" table top poster of musical instruments",
-		"product_url": "/"
+		"description": "Musical Instruments tabletop poster",
+		"product_url": "/",
+		"size_variant": "Choose size",
+		"size_variant_options":"60\" x 36\"|36\" x 36\"[+8.00]"
 	},
 	{
 		"id": "HALLOWEEN",
 		"name": "Halloween",
 		"price": "15.99",
 		"image": "/posters/halloween.webp",
-		"description": "60\" x 36\" table top poster of halloween",
+		"description": "Halloween tabletop poster",
 		"product_url": "/"
 	},
 	{
