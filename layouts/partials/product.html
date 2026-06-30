@@ -7,7 +7,12 @@
   <!-- TODO: add variant drop-down for sizes. Update main.scss grid-->
   <div class="product__button-container">
     <div class="product__price">${{ .price }}</div>
+    <label for="size">{{ .size_variant }}</label>
+    <select name="{{ .id }}-size" id="{{ .id }}-size">
+
+    </select>
     <button
+      id="{{ .id }}-btn"
       class="snipcart-add-item buy-button"
       data-item-id="{{ .id }}"
       data-item-name="{{ .name }}"
@@ -20,3 +25,25 @@
     </button>
   </div>
 </div>
+
+<script>
+  // const snipcartButton = document.getElementByClass("buy-button")
+  // options = document.getAttribute("data-item-custom1-options");
+  // print(options)
+  sizeOptions = "{{ .size_variant_options }}".split("|")
+  console.log("OPTIONS FOR {{ .id }}")
+  sizeOptions.forEach(size => {
+    console.log(size)
+    select = document.querySelector('#{{ .id }}-size');
+    option = document.createElement("option");
+    removePrice = size.includes('[') ? size.substring(0, size.indexOf('[')) : size; 
+		option.value = removePrice; 
+		option.text = removePrice;
+		select.add(option)
+  })
+	document.querySelector('#{{ .id }}-size').addEventListener('change', () => {
+		let size = document.querySelector('#{{ .id }}-size').value;
+		document.querySelector('#{{ .id }}-btn').setAttribute("data-item-custom1-value", size);
+	});
+</script>
+

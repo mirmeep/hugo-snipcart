@@ -150,6 +150,10 @@
 	grid-area: button
 }
 
+.product__variant {
+	
+}
+
 .product:nth-of-type(odd) {
 	grid-template-areas: 
 		"image name         name" 

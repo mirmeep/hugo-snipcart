@@ -4,25 +4,41 @@
 		"name": "Musical Instruments",
 		"price": "7.99",
 		"image": "/posters/musical-instruments.webp",
-		"description": "Musical Instruments tabletop poster",
+		"description": "Musical Instruments tabletop coloring poster",
 		"product_url": "/",
-		"size_variant": "Choose size",
-		"size_variant_options":"60\" x 36\"|36\" x 36\"[+8.00]"
+		"size_variant": "Size",
+		"size_variant_options":"36\" x 36\"|60\" x 36\"[+10.00]",
+		"size_variant_options_list": {
+			"small": "36\" x 36\"",
+			"large": "60\" x 36\""
+		}
 	},
 	{
 		"id": "HALLOWEEN",
 		"name": "Halloween",
-		"price": "15.99",
+		"price": "7.99",
 		"image": "/posters/halloween.webp",
-		"description": "Halloween tabletop poster",
-		"product_url": "/"
+		"description": "Halloween tabletop coloring poster",
+		"product_url": "/",
+		"size_variant": "Size",
+		"size_variant_options":"36\" x 36\"|60\" x 36\"[+20.00]",
+		"size_variant_options_list": {
+			"small": "36\" x 36\"",
+			"large": "60\" x 36\""
+		}
 	},
 	{
 		"id": "EASTER",
 		"name": "Easter",
-		"price": "15.99",
+		"price": "7.99",
 		"image": "/posters/easter.webp",
-		"description": "60\" x 36\" table top poster of easter",
-		"product_url": "/"
+		"description": "Easter tabletop coloring poster",
+		"product_url": "/",
+		"size_variant": "Size",
+		"size_variant_options":"36\" x 36\"|60\" x 36\"[+30.00]",
+		"size_variant_options_list": {
+			"small": "36\" x 36\"",
+			"large": "60\" x 36\""
+		}
 	}
 ]
