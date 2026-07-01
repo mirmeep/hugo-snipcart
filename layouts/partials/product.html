@@ -28,10 +28,7 @@
 
 <script>
   sizeOptions = `{{ .size_variant_options }}`.split("|")
-  console.log(`{{ .size_variant_options }}`)
-  console.log("OPTIONS FOR {{ .id }}")
   sizeOptions.forEach(size => {
-    console.log(size)
     select = document.getElementById('{{ .id }}-size');
     option = document.createElement("option");
     removePrice = size.includes('[') ? size.substring(0, size.indexOf('[')) : size; 
