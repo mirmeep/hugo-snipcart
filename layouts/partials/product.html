@@ -1,4 +1,4 @@
-<div class="product">
+<div class="product" accept-charset="UTF-8">
   <h2 class="product__name">{{ .name }}</h2>
   {{ with .image }}
     <img class="product__image" src="{{ . }}" alt="">
@@ -27,14 +27,11 @@
 </div>
 
 <script>
-  // const snipcartButton = document.getElementByClass("buy-button")
-  // options = document.getAttribute("data-item-custom1-options");
-  // print(options)
   sizeOptions = "{{ .size_variant_options }}".split("|")
   console.log("OPTIONS FOR {{ .id }}")
   sizeOptions.forEach(size => {
     console.log(size)
-    select = document.querySelector('#{{ .id }}-size');
+    select = document.getElementById('{{ .id }}-size');
     option = document.createElement("option");
     removePrice = size.includes('[') ? size.substring(0, size.indexOf('[')) : size; 
 		option.value = removePrice; 
