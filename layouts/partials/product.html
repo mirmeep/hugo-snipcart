@@ -1,4 +1,4 @@
-<div class="product" accept-charset="UTF-8">
+<div class="product">
   <h2 class="product__name">{{ .name }}</h2>
   {{ with .image }}
     <img class="product__image" src="{{ . }}" alt="">
@@ -26,7 +26,7 @@
   </div>
 </div>
 
-<script>
+<script accept-charset="UTF-8">
   sizeOptions = "{{ .size_variant_options }}".split("|")
   console.log("OPTIONS FOR {{ .id }}")
   sizeOptions.forEach(size => {
