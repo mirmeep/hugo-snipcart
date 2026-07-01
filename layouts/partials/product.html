@@ -6,7 +6,7 @@
   <p class="product__description">{{ .description }}</p>
   <!-- TODO: add variant drop-down for sizes. Update main.scss grid-->
   <div class="product__button-container">
-    <div class="product__price">${{ .price }}</div>
+    <div class="product__price" id="{{ .id }}-price">${{ .price }}</div>
     <label for="size">{{ .size_variant }}</label>
     <select name="{{ .id }}-size" id="{{ .id }}-size">
 
@@ -34,11 +34,19 @@
     removePrice = size.includes('[') ? size.substring(0, size.indexOf('[')) : size; 
 		option.value = removePrice; 
 		option.text = removePrice;
+    priceIncrease = size.includes('[') ? size.substring(size.indexOf('['), size.length) : 0;
+    option.setAttribute("data-price", priceIncrease)
+
 		select.add(option)
   })
 	document.querySelector('#{{ .id }}-size').addEventListener('change', () => {
 		let size = document.querySelector('#{{ .id }}-size').value;
 		document.querySelector('#{{ .id }}-btn').setAttribute("data-item-custom1-value", size);
-	});
+    
+    let variantPrice = size.substring(size.indexOf('['), size.length-1)
+    // document.getElementById('{{ .id }}-price').value = "$" + "{{ .price }}" + priceIncrease;
+
+    console.log(document.querySelector('#{{ .id }}-size').dataset.dataPrice)
+  });
 </script>
 
